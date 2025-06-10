@@ -1,0 +1,220 @@
+:root {
+    --bg-color: #0d0d0d;
+    --text-color: #ffffff;
+    --accent-color: #d4af37;
+    --card-bg: #1a1a1a;
+    --card-white: #f1f1f1;
+    --card-orange: #ff6600;
+    --card-yellow: #ffc107;
+    --transition: 0.3s ease;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: var(--transition);
+  }
+  
+  /* HEADER */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+  
+  .logo {
+    width: 50px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+  }
+  
+  .signup a {
+    color: var(--text-color);
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid var(--text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .signup a:hover {
+    background-color: var(--accent-color);
+    color: #000;
+  }
+  
+  /* HERO */
+  .hero-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 3rem 2rem;
+    gap: 2rem;
+  }
+  
+  .hero-left {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .hero-left h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+  }
+  
+  .highlighted {
+    color: var(--accent-color);
+  }
+  
+  .avatars {
+    margin-top: 1rem;
+  }
+  
+  .avatars img {
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+  }
+  
+  .subtext p {
+    margin: 0.5rem 0;
+    font-weight: 400;
+  }
+  
+  .tags span {
+    display: inline-block;
+    background-color: transparent;
+    border: 1px solid var(--text-color);
+    border-radius: 25px;
+    padding: 0.4rem 1rem;
+    margin: 0.5rem 0.5rem 0 0;
+    font-size: 0.9rem;
+    cursor: default;
+  }
+  
+  /* HERO RIGHT */
+  .hero-right .card {
+    background-color: var(--card-bg);
+    padding: 1rem;
+    border-radius: 20px;
+    max-width: 300px;
+    text-align: center;
+  }
+  
+  .hero-right .card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .cta-btn {
+    background-color: transparent;
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    padding: 0.6rem 1.2rem;
+    margin-top: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-btn:hover {
+    background-color: var(--accent-color);
+    color: #000;
+  }
+  
+  .boost {
+    text-align: left;
+    font-size: 0.9rem;
+    color: var(--accent-color);
+  }
+  
+  /* CARDS */
+  .cards {
+    display: flex;
+    gap: 1rem;
+    padding: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .cards .card {
+    flex: 1;
+    padding: 2rem;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    min-width: 200px;
+  }
+  
+  .cards .orange {
+    background-color: var(--card-orange);
+    color: #000;
+  }
+  
+  .cards .white {
+    background-color: var(--card-white);
+    color: #000;
+    position: relative;
+  }
+  
+  .cards .white .arrow {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .cards .yellow {
+    background-color: var(--card-yellow);
+    color: #000;
+  }
+  
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  #mode-toggle {
+    background-color: var(--accent-color);
+    color: #000;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+  }
+
+  hr {
+    margin: 0;
+    width: 100vw;
+    border: 1px solid var(--text-color);
+    text-align: center;
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .hero-section {
+      flex-direction: column;
+      align-items: center;
+    }
+    .cards {
+      flex-direction: column;
+    }
+  }
